@@ -1,0 +1,21 @@
+{% extends 'restaurant/index.html' %}
+
+{% block content %}
+<title> Adauga meniu </title>
+
+<form method="POST" class="form">{% csrf_token %}
+    <h1 class="form--text">Adauga meniu</h1>
+    {% for field in form %}
+    <div class="form__group">  
+        <!-- {{ field.label_tag }} --> {{ field }}
+        {{ field.errors }}
+        {% if field.help_text %}
+        <p class="help">{{ field.help_text|safe }}</p>
+        {% endif %}
+
+        {% endfor %}
+        <button type="submit" class="button">Save</button>
+           </div>
+</form>
+{% endblock %}
+

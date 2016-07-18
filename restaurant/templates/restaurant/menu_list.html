@@ -1,0 +1,24 @@
+{% extends 'restaurant/index.html' %}   
+{% block content %}
+<div class="view_menu">
+	<table class="table">
+		<thead class="table__header">
+			<tr>
+				<th>Data</th>
+				<th>Titlul meniului</th>
+				<th>Accesare Meniu</th>
+			</tr>
+		</thead>
+
+		{% for menu in all_menus%}
+		<tr class="first_tr">
+			<td>{{menu.date_day}}</td>
+			<td>{{menu.title}}</td>
+
+			<td><a href="{% url 'restaurant:detail' menu.pk %}" class="button_table">Vizualizare</a></td>
+		</tr>
+		{%endfor%}
+	</table>
+</div>
+
+{% endblock %}	

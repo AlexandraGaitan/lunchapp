@@ -1,0 +1,22 @@
+{% extends 'restaurant/index.html' %}  
+{% block content %}
+<title> {{order.name}}</title>
+<div class="view_menu">
+<table class="table">
+		<thead class="table__header">
+			<tr>
+				<th>Nume</th>
+				<th>E-mail</th>
+				<th>Adresa</th>
+				<th>Telefon</th>
+			</tr>
+		</thead>
+			<tr class="first_tr">
+			<td>{{order.name}}</td>
+			<td>{{order.email}}</td>
+			<td>{{order.adress}}</td>
+			<td>{{order.phone}}</td>
+		</tr>
+</table>
+</div>
+{% endblock %}

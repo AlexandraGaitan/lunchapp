@@ -1,0 +1,10 @@
+{% extends 'restaurant/index.html' %}   
+{% block content %}
+         <ul>
+            {% for menu in all_menus%}
+            <li><a href="{% url 'restaurant:detail' menu.pk %}"> {{menu.title}}</a></li>
+            {%endfor%}
+
+        </ul> 
+
+{% endblock %}

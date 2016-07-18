@@ -1,0 +1,55 @@
+{% extends 'restaurant/index.html' %}  
+{% block content %}
+<title> {{menu.title}}</title>
+<div class="view_list__all">
+    <ul>
+        <li>DETALII MENIU</li>
+        <li>Felul 1: {{menu.dish1}}</li>
+        <li>Felul 2: {{menu.dish2}}</li>
+        <li>Desert:  {{menu.desert}}</li>
+        <li>Rating:  {{average}}</li>
+        <li>{{menu.date_day}}</li>
+
+    </ul> 
+</div>
+<br>
+<div class="view_menu__comenzi">
+    <table class="table" >
+        <thead class="table__header">
+            <tr>
+                <th>Nume</th>
+                <th>Adresa</th>
+                <th>Email</th>
+                <th>Telefon</th>
+                <th>Status</th>
+                <th>Schimba status</th>
+                <th>Rating</th>
+            </tr>
+        </thead>
+        <tbody class="table__body">
+            {% for obj in order_list%}
+            <tr>
+                <td>{{obj.name}}</td>
+                <td>{{obj.adress}}</td>
+                <td>{{obj.email}}</td>
+                <td>{{obj.phone}}</td>
+                <td>{{obj.get_status_display}}</td>
+                {% if obj.status == 0 %}
+                <td>
+                    <a href="{% url 'restaurant:change' obj.pk  %}">Shipping</a>
+                </td>
+                {%else %}
+                <td>
+                </td>
+                {%endif%}
+                {% if obj.raiting  %}
+                <td>{{obj.raiting}}</td>
+                {%endif%}
+            </tr>
+            {%endfor%}
+        </tbody>
+    </table>   
+</div>  
+
+
+{% endblock %}

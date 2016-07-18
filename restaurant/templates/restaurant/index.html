@@ -1,0 +1,53 @@
+{% load staticfiles %}
+<html>
+    <head>
+ 
+        <link rel="stylesheet" href="{% static 'dist/assets/css/app.css' %}">
+    </head>
+    <body class="bg_img">
+
+        <header>
+         <!--  Adaugat Alexandra -->
+         <nav class="navbar clearfix">
+            <div class="navbar__item navbar__item--left">
+                <img class="logo" src="{% static 'img/logo.png' %}"/>
+                <div class="dropdown">
+                    <a href="#">Menus</a>
+                    <div class="dropdown-content">
+                       <a href="/restaurant/menu/add/">Adauga meniu</a>
+                       <a href="/restaurant/order/add/">Adauga comanda</a>
+                       <a href="/restaurant/menus/">Vizualizare meniuri</a>
+                       <a href="/restaurant/orders/">Vizualizare comenzi</a>
+                   </div>
+               </div>
+           </div>
+
+            <div class="navbar__item navbar__item--right">
+                <a href="#">Hello, Alexanadra </a>
+                <!--   <img class="avatar" src="static/img/face.jpg"/> -->
+                <img class="avatar" src="{% static 'img/face.jpg' %}"/>
+            </div>
+        </nav>
+        </header>
+        
+        <div class="form__messages">
+           {% if messages %}
+               <ul class="messages">
+                    {% for message in messages %}
+                        <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+                    {% endfor %}
+                </ul>
+            {% endif %}
+        </div>
+
+        {% block content %}
+         
+        {% endblock %}
+
+
+        <footer>
+        </footer>
+
+    </body>
+
+</html>

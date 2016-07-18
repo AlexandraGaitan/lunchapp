@@ -1,0 +1,8 @@
+*.log
+*.pyc
+lunchapp/local_settings.py
+static/admin
+static/rest_framework
+node_modules/
+bower_components/
+env

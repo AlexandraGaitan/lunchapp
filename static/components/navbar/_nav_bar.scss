@@ -1,0 +1,90 @@
+.navbar {
+	width: 100%;
+//	background: -webkit-linear-gradient(left, rgba(246,41,12,1) 0%, rgba(42,195,113,1) 0%, rgba(57,197,108,1) 15%, rgba(79,199,101,1) 23%, rgba(79,199,101,1) 31%, rgba(148,211,75,1) 100%);
+//ackground: -webkit-linear-gradient(left, rgba(42,195,114,1) 0%, rgba(156,214,70,1) 54%, rgba(190,219,58,1) 90%, rgba(227,224,44,1) 100%);
+background: rgba(42,195,114,1);
+background: -moz-linear-gradient(left, rgba(42,195,114,1) 0%, rgba(156,214,70,1) 52%, rgba(190,219,58,1) 75%, rgba(227,224,44,1) 100%);
+background: -webkit-gradient(left top, right top, color-stop(0%, rgba(42,195,114,1)), color-stop(52%, rgba(156,214,70,1)), color-stop(75%, rgba(190,219,58,1)), color-stop(100%, rgba(227,224,44,1)));
+background: -webkit-linear-gradient(left, rgba(42,195,114,1) 0%, rgba(156,214,70,1) 52%, rgba(190,219,58,1) 75%, rgba(227,224,44,1) 100%);
+background: -o-linear-gradient(left, rgba(42,195,114,1) 0%, rgba(156,214,70,1) 52%, rgba(190,219,58,1) 75%, rgba(227,224,44,1) 100%);
+background: -ms-linear-gradient(left, rgba(42,195,114,1) 0%, rgba(156,214,70,1) 52%, rgba(190,219,58,1) 75%, rgba(227,224,44,1) 100%);
+background: linear-gradient(to right, rgba(42,195,114,1) 0%, rgba(156,214,70,1) 52%, rgba(190,219,58,1) 75%, rgba(227,224,44,1) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#2ac372', endColorstr='#e3e02c', GradientType=1 );
+
+
+}
+
+.navbar__item {
+	width: 50%;
+}
+
+.navbar__item a{
+	font-size: 24px;
+	color:white;
+	text-decoration: none;
+}
+
+.navbar__item--left{
+	float: left;
+}
+
+.navbar__item--left a{
+	padding-left: 60px;
+}
+
+.navbar__item--right{
+	text-align: right;
+	float: right;
+}
+
+.navbar__item--right a{
+	padding-right: 30px;
+}
+
+.avatar{
+
+	width: 86px;
+	height: 86px;
+	border-radius: 43px;
+	-webkit-border-radius: 43px;
+	-moz-border-radius: 43px;
+	background: url(assets/img/face.jpg) no-repeat;
+}
+
+.logo{
+	height: 86px;
+}
+
+@media only screen and (max-width: 500px){
+	.logo{
+		height: 50px;
+	}
+
+}
+
+.dropdown {
+	position: relative;
+	display: inline-block;
+}
+
+.dropdown-content {
+	display: none;
+	position: absolute;
+	background-color: #f9f9f9;
+	min-width: 160px;
+	box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+	padding: 12px 16px;
+	z-index: 1;
+}
+.dropdown-content a{
+	color: black;
+	width: 100%;
+	font-size: 15px;
+	text-align: left;
+	padding: 0px;
+}
+
+
+.dropdown:hover .dropdown-content {
+	display: block;
+}

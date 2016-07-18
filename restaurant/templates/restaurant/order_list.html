@@ -1,0 +1,8 @@
+{% extends 'restaurant/index.html' %}   
+{% block content %}
+         <ol class="view_list">
+            {% for order in all_orders%}
+            <li><a href="{% url 'restaurant:detail_o' order.pk %}"> {{order.name}}</a></li>
+            {%endfor%}
+        </ol> 
+{% endblock %}
